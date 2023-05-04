@@ -34,7 +34,7 @@ public class Program {
 			System.out.println("No se ha podido hacer la conversion " + enLetras);
 		}
 		
-		String textNumber = "33.4h";
+		String textNumber = "33.4huhuh";
 		
 		try {
 			float convert = Float.parseFloat(textNumber);			

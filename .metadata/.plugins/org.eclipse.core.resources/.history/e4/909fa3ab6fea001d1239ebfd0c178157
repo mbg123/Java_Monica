@@ -22,27 +22,11 @@ public class Program {
 		System.out.println();
 		System.out.printf("El numero en letras es %d ", iNum).println();;
 		System.out.println();
+		System.out.println("dd");
 		
 		enLetras = "22";
 		iNum = Integer.parseInt(enLetras);
-		System.out.println("Ahora esta en numeros " + iNum);
-		
-		try{
-			enLetras = "22dos";
-			iNum = Integer.parseInt(enLetras);
-		} catch(Exception ex) { //Tambien puede ser tipo NumberFormatException
-			System.out.println("No se ha podido hacer la conversion " + enLetras);
-		}
-		
-		String textNumber = "33.4h";
-		
-		try {
-			float convert = Float.parseFloat(textNumber);			
-			System.out.println("Se convirtió a " + convert);
-		} catch (Exception ex) {
-			System.out.println("No se pudo convertir a float " + textNumber);
-		}
-		
+		System.out.println(iNum);
 		
 	}
 

@@ -30,19 +30,9 @@ public class Program {
 		try{
 			enLetras = "22dos";
 			iNum = Integer.parseInt(enLetras);
-		} catch(Exception ex) { //Tambien puede ser tipo NumberFormatException
+		} catch(Exception ex) {
 			System.out.println("No se ha podido hacer la conversion " + enLetras);
 		}
-		
-		String textNumber = "33.4h";
-		
-		try {
-			float convert = Float.parseFloat(textNumber);			
-			System.out.println("Se convirtió a " + convert);
-		} catch (Exception ex) {
-			System.out.println("No se pudo convertir a float " + textNumber);
-		}
-		
 		
 	}
 

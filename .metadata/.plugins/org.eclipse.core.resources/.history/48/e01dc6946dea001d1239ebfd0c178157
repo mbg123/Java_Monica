@@ -1,0 +1,17 @@
+
+public class Program {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hola mundo");
+		int iNum = 4;
+		System.out.println("Cantidad de textos "+ iNum);
+		double fNum = 8.9999;
+		System.out.println(fNum);
+		
+		@SuppressWarnings("removal")
+		Integer num = new Integer(4);
+		System.out.println(num);
+	}
+
+}

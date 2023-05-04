@@ -34,13 +34,15 @@ public class Program {
 			System.out.println("No se ha podido hacer la conversion " + enLetras);
 		}
 		
-		String textNumber = "33.4h";
+		String textNumber = "33.4";
 		
 		try {
-			float convert = Float.parseFloat(textNumber);			
-			System.out.println("Se convirtió a " + convert);
+
+			float convert = Float.parseFloat(textNumber);
+			
+			System.out.println(convert);
 		} catch (Exception ex) {
-			System.out.println("No se pudo convertir a float " + textNumber);
+			System.out.println("No se pudo convertir a float");
 		}
 		
 		
