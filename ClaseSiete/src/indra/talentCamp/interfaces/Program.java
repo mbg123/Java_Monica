@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import indra.talentCamp.generics.*;
+
 public class Program {
 
 	public static void main(String[] args) {
@@ -47,6 +49,56 @@ public class Program {
 		Collections.sort(figuras);
 		figuras.stream().forEach(System.out::println);
 		
-	}
+	
 
+		//Ejemplo de uso con interfaz funcional
+		Operacion<Integer> suma = (a,b)->(a+b);
+		int res = suma.operar(2, 2);
+		System.out.println("Sumar 2 + 2 = " + res);
+		
+		OperacionInteger sumaInt = (a,b)->(a+b);
+		int resInt = sumaInt.operar(2, 2);
+		System.out.println("Sumar 2 + 2 = " + resInt);
+		
+		System.out.println("--------------");
+		System.out.println();
+		
+		//Caja fuerte ejemplo:		
+		/*CajaFuerte<String> clave  = new CajaFuerte<>("Abrir");
+		clave.guardarValor("La clave del banco");
+		
+		String claveOk = clave.leerValor("Abrir");
+		System.out.println("La clave es " + claveOk);
+		
+		System.out.println("Intentado acceder a una clave invalida");
+	
+		try {
+			String mal = clave.leerValor("esta no es");
+		} catch (Exception ex) {
+			System.err.println(ex.getMessage());
+		}
+		
+		
+		System.out.println("*****");
+		*/
+		
+		//Con numeros
+		CajaFuerte<Integer, String> claveInt  = new CajaFuerte<>("Abrir");
+		claveInt.guardarValor(1234);
+		
+		int claveIntOk = claveInt.leerValor("Abrir");
+		System.out.println("La clave es " + claveIntOk);
+		
+		System.out.println("Intentado acceder a una clave invalida");
+	
+		try {
+			int malInt = claveInt.leerValor("esta no es");
+		} catch (Exception ex) {
+			System.err.println(ex.getMessage());
+		}
+		
+		
+	}
+	
+	
 }
